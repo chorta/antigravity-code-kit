@@ -27,6 +27,5 @@ trigger: always_on
 - **Standards:** Ensure all generated elements remain fully keyboard-navigable and adhere to WCAG 2.1 accessibility standards.
 
 ## Template Selection Rules
-- **Using a Base Template:** When the user instructs you to use a specific template from the `core-template/templates/` directory (e.g., `core-template/templates/two-column.html`), you must copy the entire contents of that template file and overwrite the active `index.html` file at the root of the project.
-- **Overwriting Warning:** Inform the user when overwriting `index.html`, as this will wipe out any existing app code in the canvas.
-- **Canvas Preserved:** After overriding `index.html` with the new template, resume your normal behavior of injecting new code exclusively inside the `<div id="ag-app-canvas">` injection point that comes with the template.
+- **Using a Base Template:** When the user instructs you to use a specific template from the `core-template/templates/` directory (e.g., `core-template/templates/two-column.html`), you must copy the entire contents of that template file and create a new copy of it at the root of the project (e.g., `two-column.html`). You should not overwrite `index.html` unless explicitly asked.
+- **Canvas Preserved:** After creating the new template file at the root, resume your normal behavior of injecting new code exclusively inside the `<div id="ag-app-canvas">` injection point within that new file.
