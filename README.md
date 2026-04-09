@@ -28,9 +28,9 @@ When using Anti-Gravity within this workspace, the agent operates under the foll
 
 ---
 
-## ♿ Accessibility (A11y) Guarantee
+## ♿ Accessibility (A11y)
 
-UCSD applications must be inclusive. The agent code generation is wired to meet WCAG 2.1 accessibility standards by default:
+UCSD applications must be inclusive. The agent code generation is wired to meet WCAG 2.1 accessibility standards by default. For more information, visit [accessibility.ucsd.edu](https://accessibility.ucsd.edu/) or use the TGPT Accessibility Assistant chatbot for questions about accessibility:
 * **Interactive Elements:** Every new `<button>` or interactive link requires a descriptive `aria-label`.
 * **Images:** Every new `<img>` tag requires a descriptive `alt` attribute.
 * **Navigation:** All generated components maintain full keyboard-navigability.
@@ -59,6 +59,28 @@ The UI Kit Agent will automatically:
 3. Extract and securely inject only that specific markup into your active file's canvas.
 4. Correct any relative asset paths and ensure `aria-label` or accessibility attributes remain intact.
 
+**Available Components (Kitchen Sink):**
+For live examples of all components, visit the full documentation page: [developers.ucsd.edu/decorator/kitchen-sink](https://developers.ucsd.edu/decorator/kitchen-sink).
+- `alerts.html` (Warning, Success, Info, Danger alerts)
+- `badges.html` (Notification badges)
+- `breadcrumbs.html` (Navigation paths)
+- `button_dropdowns.html` (Buttons that trigger dropdowns)
+- `buttons.html` (Buttons: primary, default, danger, small, large, etc.)
+- `code.html` (Code formatting blocks)
+- `dropdowns.html` (Standard dropdown menus)
+- `equal_column_layout.html` (Layout grids)
+- `forms.html` (Various form inputs, groups, validation states)
+- `helper_classes.html` (Utility classes for spacing, text alignment, etc.)
+- `icons.html` (Iconography available to use)
+- `images.html` (Image sizing and styling)
+- `input_groups.html` (Inputs with appended/prepended elements)
+- `javascript_components.html` (Modals, tooltips, popovers, tabs, carousels)
+- `pagination.html` (Pagination controls)
+- `panels.html` (Content panels with headers, footers, context styles)
+- `progress_bars.html` (Progress indicators)
+- `tables.html` (Basic, striped, bordered, hover state tables)
+- `typography.html` (Headings, paragraphs, blockquotes, lists)
+
 ### 3. Implementing Complex Widgets
 Widgets (like DataTables or FullCalendar) require heavier lifting. Our `core-template/widgets/` directory houses complex references.
 
@@ -77,8 +99,8 @@ To launch your next project:
 1. **Clone the Repository**
    Pull down this starter kit layout.
    ```bash
-   git clone [https://github.com/your-org/antigravity-living-shell.git](https://github.com/your-org/antigravity-living-shell.git)
-   cd antigravity-living-shell
+   git clone https://github.com/chorta/antigravity-code-kit/tree/main 
+   cd antigravity-code-kit
    ```
 
 2. **Open your IDE with Google Antigravity enabled.**
