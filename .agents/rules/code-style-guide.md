@@ -27,9 +27,13 @@ trigger: always_on
 - **Standards:** Ensure all generated elements remain fully keyboard-navigable and adhere to WCAG 2.1 accessibility standards.
 
 ## Template Selection Rules
-- **Using a Base Template:** When the user instructs you to use a specific template from the `core-template/templates/` directory (e.g., `core-template/templates/two-column.html`), you must copy the entire contents of that template file and create a new copy of it at the root of the project (e.g., `two-column.html`). You should not overwrite `index.html` unless explicitly asked.
+- **Explicit Prompting:** If the user doesn't specify a template when asking to build a new page/component, you must immediately prompt them to select one before building anything.
+- **Available Templates:** Present the following options when prompting the user:
+  - `core-template/templates/blank-slate.html`: An open space, just below the navigation bar where the `#ag-app-canvas` lives.
+  - `core-template/templates/two-column.html`: Has a left column for sub-navigation or a side container. The `#ag-app-canvas` is located on the second (bigger) column.
+  - `core-template/templates/three-column.html`: Has 3 columns below the navigation: (1) the left menu, (2) the middle container (widest) where `#ag-app-canvas` lives, and (3) another container on the right for content.
+- **Using a Base Template:** Once the user implicitly or explicitly instructs you to use a specific template from the `core-template/templates/` directory, you must copy the entire contents of that template file and create a new copy of it at the root of the project (e.g., `two-column.html`). You should not overwrite `index.html` unless explicitly asked.
 - **Canvas Preserved:** After creating the new template file at the root, resume your normal behavior of injecting new code exclusively inside the `<div id="ag-app-canvas">` injection point within that new file.
-
 ## Component & Widget Integration Rules
 1. **Component Discovery:** If the user requests a common UI component (e.g., alerts, buttons) or a complex widget (e.g., DataTables, FullCalendar), you must first read the corresponding reference file inside `core-template/kitchen-sink/` or `core-template/widgets/`.
 2. **Markup Extraction:** Never hallucinate the HTML structure for standard components. Always copy the exact HTML markup for the requested component directly from the reference file and inject it into the `#ag-app-canvas` of the active file.
