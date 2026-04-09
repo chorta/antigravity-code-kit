@@ -204,6 +204,60 @@
 
 				<div class="col-md-12">
 					<div id="ag-app-canvas" data-ag-role="main-app-container">
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+								<div class="panel panel-default text-center">
+									<div class="panel-heading">
+										<h2 class="panel-title">Tic Tac Toe</h2>
+									</div>
+									<div class="panel-body">
+										<p id="game-status" class="lead text-primary">Player X's turn</p>
+										<div id="tictactoe-board" class="container-fluid">
+											<div class="row">
+												<div class="col-xs-4"><button class="btn btn-default btn-block btn-lg"
+														aria-label="Square 0,0" data-index="0"
+														role="button">&nbsp;</button></div>
+												<div class="col-xs-4"><button class="btn btn-default btn-block btn-lg"
+														aria-label="Square 0,1" data-index="1"
+														role="button">&nbsp;</button></div>
+												<div class="col-xs-4"><button class="btn btn-default btn-block btn-lg"
+														aria-label="Square 0,2" data-index="2"
+														role="button">&nbsp;</button></div>
+											</div>
+											<!-- margin for vertical spacing between rows using multiple breaks or just empty divs as no inline styles -->
+											<br />
+											<div class="row">
+												<div class="col-xs-4"><button class="btn btn-default btn-block btn-lg"
+														aria-label="Square 1,0" data-index="3"
+														role="button">&nbsp;</button></div>
+												<div class="col-xs-4"><button class="btn btn-default btn-block btn-lg"
+														aria-label="Square 1,1" data-index="4"
+														role="button">&nbsp;</button></div>
+												<div class="col-xs-4"><button class="btn btn-default btn-block btn-lg"
+														aria-label="Square 1,2" data-index="5"
+														role="button">&nbsp;</button></div>
+											</div>
+											<br />
+											<div class="row">
+												<div class="col-xs-4"><button class="btn btn-default btn-block btn-lg"
+														aria-label="Square 2,0" data-index="6"
+														role="button">&nbsp;</button></div>
+												<div class="col-xs-4"><button class="btn btn-default btn-block btn-lg"
+														aria-label="Square 2,1" data-index="7"
+														role="button">&nbsp;</button></div>
+												<div class="col-xs-4"><button class="btn btn-default btn-block btn-lg"
+														aria-label="Square 2,2" data-index="8"
+														role="button">&nbsp;</button></div>
+											</div>
+										</div>
+									</div>
+									<div class="panel-footer">
+										<button id="reset-game" class="btn btn-primary" aria-label="Reset Game">Reset
+											Game</button>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -249,7 +303,8 @@
 
 	<script src="scripts/base.min.js"></script>
 
-
+	<!-- Tic Tac Toe App Logic -->
+	<script src="js/tictactoe.js"></script>
 
 </body>
 

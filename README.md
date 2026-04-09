@@ -49,11 +49,15 @@ Before asking the agent to build a new view or component, you must designate a l
 
 *Workflow*: Tell the agent, "Use the two-column template to build a dashboard." The agent will copy `two-column.html` to the root of the project and begin injecting code into its `#ag-app-canvas`.
 
-### 2. Injecting UI Components (Kitchen Sink)
-Instead of relying on the AI to hallucinate markup, dictate that the agent references our authorized code snippets.
-The `core-template/kitchen-sink/` directory acts as a gallery of standard UI elements (buttons, forms, alerts).
+### 2. Injecting UI Components (UI Kit Agent)
+Instead of relying on the AI to hallucinate markup, you can trigger the specialized **UI Kit Agent** defined in `.agents/rules/kitchen-sink.md`. This agent acts as the master gallery manager for all approved styled components.
 
-*Workflow*: Tell the agent, "Add a primary warning alert from the kitchen-sink." The agent will locate the exact markup variation inside the kitchen sink, extract it, and inject it securely into your active file's canvas.
+*Workflow*: Tell the agent, "Add a primary warning alert from the kitchen-sink" or "Add a standard login form from the UI kit." 
+The UI Kit Agent will automatically:
+1. Match your request to the correct category in the `core-template/kitchen-sink/` directory (e.g., `alerts.html`, `forms.html`).
+2. Search within the `bs-example` wrappers to find the precise component block.
+3. Extract and securely inject only that specific markup into your active file's canvas.
+4. Correct any relative asset paths and ensure `aria-label` or accessibility attributes remain intact.
 
 ### 3. Implementing Complex Widgets
 Widgets (like DataTables or FullCalendar) require heavier lifting. Our `core-template/widgets/` directory houses complex references.
