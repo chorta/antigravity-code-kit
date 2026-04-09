@@ -36,3 +36,7 @@ trigger: always_on
 3. **Dependency Handling (Crucial for Widgets):** Many complex widgets require specific stylesheet and script inclusions. You must inspect the `<head>` and the bottom of the `<body>` in the reference file to identify any widget-specific CSS (`<link rel="...">`) and JS (`<script>`).
 4. **Path Resolution:** When copying `<link>` or `<script>` tags into the active build, ensure you correct any relative paths (e.g., remove `../` if transferring from `core-template/widgets/` to the root directory) so they load correctly.
 5. **Initialization Logic:** Do not use inline `<script>` tags for widget initialization (e.g., `$(document).ready(...)`). Extract any initialization logic found in the reference file and place it within a properly named JS file in the `/js/` directory, following the JavaScript Guidelines.
+
+## Kitchen Sink Specifics
+- **Partial Extraction:** Unlike full templates or complex widgets, the files in `core-template/kitchen-sink/` are galleries with many variations of a component (e.g., `buttons.html` has primary, default, danger, small, etc.). **DO NOT** completely copy the entire contents of a Kitchen Sink file. 
+- **Target Selection:** You must first inspect the corresponding kitchen sink file, locate the precise code block representing the specific variation the user asked for (typically found inside a `<div class="bs-example">` wrapper or similar container), and extract only that specific block of markup to inject into the canvas.
