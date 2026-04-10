@@ -30,10 +30,20 @@ When using Anti-Gravity within this workspace, the agent operates under the foll
 
 ## ♿ Accessibility (A11y)
 
-UCSD applications must be inclusive. The agent code generation is wired to meet WCAG 2.1 accessibility standards by default. For more information, visit [accessibility.ucsd.edu](https://accessibility.ucsd.edu/) or use the TGPT Accessibility Assistant chatbot for questions about accessibility:
-* **Interactive Elements:** Every new `<button>` or interactive link requires a descriptive `aria-label`.
-* **Images:** Every new `<img>` tag requires a descriptive `alt` attribute.
-* **Navigation:** All generated components maintain full keyboard-navigability.
+UCSD applications must be inclusive. The Antigravity agent is rigidly governed by the [Accessibility Agent Rule](.agents/rules/accessibility.md) which enforces ADA Title II compliance whenever generating UI markup. 
+
+This rule is strictly based on the following standards:
+- [UCSD Website Accessibility Checklist](https://accessibility.ucsd.edu/checklists/websites.html)
+- [UCSD Accessibility Standards](https://accessibility.ucsd.edu/policies-standards/ucsd-accessibility-guidelines.html)
+- [WCAG 2.1 AA Standards](https://www.w3.org/TR/WCAG21/)
+
+By default, the agent enforces constraints such as:
+* **Interactive Elements:** Minimum 44x44px touch targets and required `aria-label` implementations.
+* **Images:** Required descriptive `alt` attributes.
+* **Navigation:** Tabindex limitations and skip links to ensure full keyboard-navigability operations.
+* **Structure:** Strict semantic HTML and proper heading hierarchy.
+
+For more information, visit [accessibility.ucsd.edu](https://accessibility.ucsd.edu/) or use the TGPT Accessibility Assistant chatbot for specific answers.
 
 ---
 
