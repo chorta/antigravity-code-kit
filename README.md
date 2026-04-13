@@ -47,6 +47,18 @@ For more information, visit [accessibility.ucsd.edu](https://accessibility.ucsd.
 
 ---
 
+## 🔒 Security
+
+UCSD applications must strictly adhere to campus information security policies. The Antigravity agent is governed by the [Security Rule](.agents/rules/security.md) whenever generating backend logic, infrastructure configurations, or data handling processes.
+
+This rule enforces constraints such as:
+* **Data Privacy:** Treat unstructured data as sensitive; enforce encryption in transit (HTTPS/TLS) and never hardcode credentials.
+* **Vulnerability Mitigation:** Strictly defend against OWASP Top Ten vulnerabilities (e.g., SQL injection, XSS, CSRF).
+* **Identity and Access Management:** Integrate with campus SSO (Active Directory) and apply the principle of least privilege.
+* **Logging:** Maintain sanitized audit trails for significant events without exposing sensitive metrics.
+
+---
+
 ## 🤖 Agent Workflows: Building with Antigravity
 
 This is how you command the Antigravity agent to build inside the Living Shell.
@@ -99,6 +111,15 @@ Widgets (like DataTables or FullCalendar) require heavier lifting. Our `core-tem
 2. Inspect the reference file's `<head>` and bottom `<body>` to import necessary widget-specific CSS (`<link>`) and JS (`<script>`) dependencies.
 3. Resolve correct relative paths from the root directory.
 4. Extract the inline initialization scripts from the template into a clean, new javascript file within `/js/`.
+
+### 4. Automatic Navigation Synchronization
+When you create or modify pages outside the `core-template/` directory, the agent is bound by the [Navigation Rule](.agents/rules/navigation.md) to automatically keep the site's navigation menus up to date.
+
+*Workflow*: Tell the agent, "Create a new 'About Us' page and add it to the navigation."
+The agent will:
+1. Create the new page using the requested base template.
+2. Locate the **mobile offcanvas nav**, **desktop navbar**, and **side nav** (if applicable) across your active project files.
+3. Inject the new navigational links and ensure all relative paths resolve correctly, keeping both desktop and mobile layouts perfectly synchronized.
 
 ---
 
