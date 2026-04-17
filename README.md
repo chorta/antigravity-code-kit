@@ -138,7 +138,7 @@ To launch your next project:
 1. **Clone the Repository**
    Pull down this starter kit layout.
    ```bash
-   git clone https://github.com/chorta/antigravity-code-kit/tree/main 
+   git clone https://github.com/chorta/antigravity-code-kit.git
    cd antigravity-code-kit
    ```
 
