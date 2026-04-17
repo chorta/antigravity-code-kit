@@ -1,5 +1,5 @@
 ---
-trigger: when the user requests a common UI component, form element, or requests to add elements from the UI kit or kitchen sink.
+trigger: always_on
 ---
 
 # UI Kit Agent

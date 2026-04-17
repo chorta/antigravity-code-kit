@@ -112,7 +112,16 @@ Widgets (like DataTables or FullCalendar) require heavier lifting. Our `core-tem
 3. Resolve correct relative paths from the root directory.
 4. Extract the inline initialization scripts from the template into a clean, new javascript file within `/js/`.
 
-### 4. Automatic Navigation Synchronization
+### 4. Injecting Content Modules (Modules Agent)
+The **Modules Agent** defined in `.agents/rules/modules.md` handles the extraction and integration of specialized content design blocks from `core-template/templates/modules.html`. These include structural blocks like carousels, callouts, and news listings.
+
+*Workflow*: Tell the agent, "Add a text and image callout module" or "Insert the video embed module."
+The Modules Agent will automatically:
+1. Locate the correct master layout wrapper inside `modules.html`.
+2. Extract the exact structural markup and grid columns directly into your canvas.
+3. Seamlessly replace the sample text, placeholder image `src` routes, and generic URLs with your localized content while preserving CSS wrapper classes intact.
+
+### 5. Automatic Navigation Synchronization
 When you create or modify pages outside the `core-template/` directory, the agent is bound by the [Navigation Rule](.agents/rules/navigation.md) to automatically keep the site's navigation menus up to date.
 
 *Workflow*: Tell the agent, "Create a new 'About Us' page and add it to the navigation."
@@ -121,7 +130,7 @@ The agent will:
 2. Locate the **mobile offcanvas nav**, **desktop navbar**, and **side nav** (if applicable) across your active project files.
 3. Inject the new navigational links and ensure all relative paths resolve correctly, keeping both desktop and mobile layouts perfectly synchronized.
 
-### 5. Third-Party AI Integrations (Cursor, Copilot, Claude Code)
+### 6. Third-Party AI Integrations (Cursor, Copilot, Claude Code)
 The Antigravity Code Kit comes pre-configured with rules and constraints for third-party AI coding environments. By default, the strict brand and accessibility rules found in `.agents/rules/` have been compiled into global rule files for popular LLM-powered IDEs and CLI tools:
 - **`CLAUDE.md`** - Automatically picked up by **Claude Code** and the Anthropic ecosystem to ensure project compliance.
 - **`.cursorrules`** - Defines the core instruction set natively for the **Cursor IDE** and its embedded AI models.

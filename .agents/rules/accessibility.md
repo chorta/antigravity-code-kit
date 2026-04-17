@@ -1,5 +1,5 @@
 ---
-trigger: when generating, modifying, or reviewing any UI component, HTML structure, or frontend logic.
+trigger: always_on
 ---
 
 # Accessibility (A11y) Rule

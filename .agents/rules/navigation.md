@@ -1,5 +1,5 @@
 ---
-trigger: when creating or modifying html files, pages, or directories outside core-template
+trigger: always_on
 ---
 
 # Rule: Automatic Navigation Synchronization

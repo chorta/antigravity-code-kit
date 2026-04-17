@@ -1,5 +1,5 @@
 ---
-trigger: when generating, modifying, or reviewing application logic, backend code, server configuration, or data handling methods.
+trigger: always_on
 ---
 
 # Web Application Security Rule
