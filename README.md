@@ -82,7 +82,7 @@ The UI Kit Agent will automatically:
 4. Correct any relative asset paths and ensure `aria-label` or accessibility attributes remain intact.
 
 **Available Components (Kitchen Sink):**
-For live examples of all components, visit the full documentation page: [developers.ucsd.edu/decorator/kitchen-sink](https://developers.ucsd.edu/decorator/kitchen-sink).
+For live examples of all components, visit the full documentation page: [developer.ucsd.edu/design/v5-kitchen-sink/](https://developer.ucsd.edu/design/v5-kitchen-sink/index.html).
 - `alerts.html` (Warning, Success, Info, Danger alerts)
 - `badges.html` (Notification badges)
 - `breadcrumbs.html` (Navigation paths)
