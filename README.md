@@ -121,6 +121,19 @@ The Modules Agent will automatically:
 2. Extract the exact structural markup and grid columns directly into your canvas.
 3. Seamlessly replace the sample text, placeholder image `src` routes, and generic URLs with your localized content while preserving CSS wrapper classes intact.
 
+**Available Content Modules:**
+- Text and CTA with Image (Full Height Image, Left/Right variants)
+- Callout Content Modules (One, Two, Three, or Four boxes)
+- Full Width Text Modules
+- Video Embed Module
+- Drawer (Accordion / Text and Headline)
+- Rotator (Images Carousel)
+- News Listings (Static and Auto-populated)
+- Event/Multiple Listings
+- Callout Content Blocks (Grid of images)
+- Contact Information & Map
+- Social Media Icons
+
 ### 5. Automatic Navigation Synchronization
 When you create or modify pages outside the `core-template/` directory, the agent is bound by the [Navigation Rule](.agents/rules/navigation.md) to automatically keep the site's navigation menus up to date.
 
