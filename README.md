@@ -121,6 +121,14 @@ The agent will:
 2. Locate the **mobile offcanvas nav**, **desktop navbar**, and **side nav** (if applicable) across your active project files.
 3. Inject the new navigational links and ensure all relative paths resolve correctly, keeping both desktop and mobile layouts perfectly synchronized.
 
+### 5. Third-Party AI Integrations (Cursor, Copilot, Claude Code)
+The Antigravity Code Kit comes pre-configured with rules and constraints for third-party AI coding environments. By default, the strict brand and accessibility rules found in `.agents/rules/` have been compiled into global rule files for popular LLM-powered IDEs and CLI tools:
+- **`CLAUDE.md`** - Automatically picked up by **Claude Code** and the Anthropic ecosystem to ensure project compliance.
+- **`.cursorrules`** - Defines the core instruction set natively for the **Cursor IDE** and its embedded AI models.
+- **`.github/copilot-instructions.md`** - Serves as the official custom instruction file for **GitHub Copilot Chat** and Edits.
+
+When using these tools, your agent context window is automatically populated with the Antigravity Living Shell system instructions without requiring any manual setup.
+
 ---
 
 ## 🛠️ Getting Started
