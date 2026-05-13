@@ -166,4 +166,12 @@ To launch your next project:
 
 2. **Open your IDE with Google Antigravity enabled.**
 3. **Draft your initial Instruction:**
-   *Example: "Create a new page using the 'three-column.html' template. In the middle canvas, construct a new user registration form utilizing standard fields from our kitchen sink. Place the form validation logic into 'js/registration.js'."*
+
+   Here are 3 example prompts to kickstart your project:
+
+   * **Prompt 1:** "Create a new page using the 'three-column.html' template. In the middle canvas, construct a new user registration form utilizing standard fields from our kitchen sink. Place the form validation logic into 'js/registration.js'."
+   * **Prompt 2:** "Use the 'blank-slate.html' template to build a landing page. Add a full width text module at the top, and a contact form at the bottom using elements from the kitchen sink."
+   * **Prompt 3:** "Create a 'Contact Us' page from the 'two-column.html' template. In the left column, add our contact info. In the main canvas, insert the contact form module and include a Google map embed."
+
+> [!NOTE]
+> The core templates provided in `core-template/` are written in HTML, but they can be easily adapted and used in any programming language or framework (e.g., React, Vue, PHP, Python) that outputs HTML.

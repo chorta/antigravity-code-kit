@@ -27,7 +27,7 @@ trigger: always_on
 - **Standards:** Ensure all generated elements remain fully keyboard-navigable and adhere to WCAG 2.1 accessibility standards.
 
 ## Template Selection Rules
-- **Explicit Prompting:** If the user doesn't specify a template when asking to build a new page/component, you must immediately prompt them to select one before building anything.
+- **Explicit Prompting (MUST STOP & ASK):** NEVER select a default template on your own. If the user doesn't explicitly specify a template when asking to build a new page/component, you MUST immediately pause, ask the user to confirm, and present the available template options below before writing any code.
 - **Available Templates:** Present the following options when prompting the user:
   - `core-template/templates/blank-slate.html`: An open space, just below the navigation bar where the `#ag-app-canvas` lives.
   - `core-template/templates/two-column.html`: Has a left column for sub-navigation or a side container. The `#ag-app-canvas` is located on the second (bigger) column.
