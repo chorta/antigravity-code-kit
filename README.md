@@ -1,6 +1,6 @@
 # 🚀 Anti-Gravity: UCSD Living Shell Starter Kit
 
-Welcome to the official developer starter kit for UCSD brand-compliant application development. By combining the power of the **Google Anti-Gravity** agent with a strict "Living Shell" architecture, developers can rapidly build applications without compromising the UCSD brand identity, compliance, and web accessibility (A11y) standards.
+Welcome to the campus developer starter kit for UCSD brand-compliant application development. By combining the power of the **Google Anti-Gravity** agent with a strict "Living Shell" architecture, developers can rapidly build applications without compromising the UCSD brand identity, compliance, and web accessibility (A11y) standards.
 
 For full details on UCSD branding, refer to the [UCSD Brand Guidelines](https://brand.ucsd.edu/).
 
